@@ -1,20 +1,29 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
-package myfancyjavaproject;
+// C++ program to find GCD of two numbers
+#include <iostream>
+using namespace std;
+// Recursive function to return gcd of a and b
+int gcd(int a, int b)
+{
+	// Everything divides 0
+	if (a == 0)
+	return b;
+	if (b == 0)
+	return a;
 
-/**
- *
- * @author student
- */
-public class MyFancyJavaProject {
+	// base case
+	if (a == b)
+		return a;
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
-    
+	// a is greater
+	if (a > b)
+		return gcd(a-b, b);
+	return gcd(a, b-a);
+}
+
+// Driver program to test above function
+int main()
+{
+	int a = 98, b = 56;
+	cout<<"GCD of "<<a<<" and "<<b<<" is "<<gcd(a, b);
+	return 0;
 }
