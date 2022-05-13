@@ -1,5 +1,5 @@
 
-class Test
+class TestFactory
 {
 	
 	static int gcd_value(int c, int d)
