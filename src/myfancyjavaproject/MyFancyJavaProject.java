@@ -2,27 +2,27 @@
 class Test
 {
 	
-	static int gcd(int a, int b)
+	static int gcd(int c, int d)
 	{
 		
-		if (a == 0)
+		if (c == 0)
 		return b;
-		if (b == 0)
+		if (d == 0)
 		return a;
 	
 	
-		if (a == b)
-			return a;
+		if (c == d)
+			return c;
 	
-		if (a > b)
-			return gcd(a-b, b);
-		return gcd(a, b-a);
+		if (c > d)
+			return gcd(c-d, d);
+		return gcd(c, d-c);
 	}
 	
 	
 	public static void main(String[] args)
 	{
-		int a = 98, b = 56;
-		System.out.println("GCD of " + a +" and " + b + " is " + gcd(a, b));
+		int c = 98, d = 56;
+		System.out.println("GCD of " + c +" and " + d + " is " + gcd(c, d));
 	}
 }
