@@ -2,7 +2,7 @@
 class Test
 {
 	
-	static int gcd(int c, int d)
+	static int gcd_value(int c, int d)
 	{
 		
 		if (c == 0)
@@ -23,6 +23,6 @@ class Test
 	public static void main(String[] args)
 	{
 		int c = 98, d = 56;
-		System.out.println("GCD of " + c +" and " + d + " is " + gcd(c, d));
+		System.out.println("GCD of " + c +" and " + d + " is " + gcd_value(c, d));
 	}
 }
